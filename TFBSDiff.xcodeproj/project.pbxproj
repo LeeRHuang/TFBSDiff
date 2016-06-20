@@ -15,6 +15,10 @@
 		7C4D0A961D182AEA005E8EB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C4D0A941D182AEA005E8EB2 /* LaunchScreen.storyboard */; };
 		7C4D0AA11D182AEA005E8EB2 /* TFBSDiffTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4D0AA01D182AEA005E8EB2 /* TFBSDiffTests.m */; };
 		7C4D0AAC1D182AEA005E8EB2 /* TFBSDiffUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4D0AAB1D182AEA005E8EB2 /* TFBSDiffUITests.m */; };
+		7C4D0AC21D182C26005E8EB2 /* BSDiffFileManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4D0AC11D182C26005E8EB2 /* BSDiffFileManage.m */; };
+		7C4D0AC71D182CA2005E8EB2 /* bsdiff.c in Sources */ = {isa = PBXBuildFile; fileRef = 7C4D0AC31D182CA2005E8EB2 /* bsdiff.c */; };
+		7C4D0AC81D182CA2005E8EB2 /* bspatch.c in Sources */ = {isa = PBXBuildFile; fileRef = 7C4D0AC51D182CA2005E8EB2 /* bspatch.c */; };
+		7C4D0ACA1D1839C0005E8EB2 /* libbz2.1.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C4D0AC91D1839C0005E8EB2 /* libbz2.1.0.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,13 @@
 		7C4D0AA71D182AEA005E8EB2 /* TFBSDiffUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TFBSDiffUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C4D0AAB1D182AEA005E8EB2 /* TFBSDiffUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFBSDiffUITests.m; sourceTree = "<group>"; };
 		7C4D0AAD1D182AEA005E8EB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C4D0AC01D182C26005E8EB2 /* BSDiffFileManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSDiffFileManage.h; sourceTree = "<group>"; };
+		7C4D0AC11D182C26005E8EB2 /* BSDiffFileManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSDiffFileManage.m; sourceTree = "<group>"; };
+		7C4D0AC31D182CA2005E8EB2 /* bsdiff.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bsdiff.c; sourceTree = "<group>"; };
+		7C4D0AC41D182CA2005E8EB2 /* bsdiff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bsdiff.h; sourceTree = "<group>"; };
+		7C4D0AC51D182CA2005E8EB2 /* bspatch.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bspatch.c; sourceTree = "<group>"; };
+		7C4D0AC61D182CA2005E8EB2 /* bspatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bspatch.h; sourceTree = "<group>"; };
+		7C4D0AC91D1839C0005E8EB2 /* libbz2.1.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.1.0.tbd; path = usr/lib/libbz2.1.0.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C4D0ACA1D1839C0005E8EB2 /* libbz2.1.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +93,7 @@
 		7C4D0A7A1D182AEA005E8EB2 = {
 			isa = PBXGroup;
 			children = (
+				7C4D0AC91D1839C0005E8EB2 /* libbz2.1.0.tbd */,
 				7C4D0A851D182AEA005E8EB2 /* TFBSDiff */,
 				7C4D0A9F1D182AEA005E8EB2 /* TFBSDiffTests */,
 				7C4D0AAA1D182AEA005E8EB2 /* TFBSDiffUITests */,
@@ -101,6 +114,7 @@
 		7C4D0A851D182AEA005E8EB2 /* TFBSDiff */ = {
 			isa = PBXGroup;
 			children = (
+				7C4D0AB91D182B16005E8EB2 /* BSDIFF */,
 				7C4D0A891D182AEA005E8EB2 /* AppDelegate.h */,
 				7C4D0A8A1D182AEA005E8EB2 /* AppDelegate.m */,
 				7C4D0A8C1D182AEA005E8EB2 /* ViewController.h */,
@@ -138,6 +152,19 @@
 				7C4D0AAD1D182AEA005E8EB2 /* Info.plist */,
 			);
 			path = TFBSDiffUITests;
+			sourceTree = "<group>";
+		};
+		7C4D0AB91D182B16005E8EB2 /* BSDIFF */ = {
+			isa = PBXGroup;
+			children = (
+				7C4D0AC41D182CA2005E8EB2 /* bsdiff.h */,
+				7C4D0AC31D182CA2005E8EB2 /* bsdiff.c */,
+				7C4D0AC61D182CA2005E8EB2 /* bspatch.h */,
+				7C4D0AC51D182CA2005E8EB2 /* bspatch.c */,
+				7C4D0AC01D182C26005E8EB2 /* BSDiffFileManage.h */,
+				7C4D0AC11D182C26005E8EB2 /* BSDiffFileManage.m */,
+			);
+			path = BSDIFF;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,8 +298,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C4D0A8E1D182AEA005E8EB2 /* ViewController.m in Sources */,
+				7C4D0AC21D182C26005E8EB2 /* BSDiffFileManage.m in Sources */,
 				7C4D0A8B1D182AEA005E8EB2 /* AppDelegate.m in Sources */,
+				7C4D0AC71D182CA2005E8EB2 /* bsdiff.c in Sources */,
 				7C4D0A881D182AEA005E8EB2 /* main.m in Sources */,
+				7C4D0AC81D182CA2005E8EB2 /* bspatch.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
